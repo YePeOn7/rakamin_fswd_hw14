@@ -1,8 +1,5 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
-import {hashPassword, comparePassword} from "@/lib/bcrypt"
-import jwt from "jsonwebtoken"
-import { cookies } from "next/headers";
 import { uploadFile } from "@/lib/uploadFile";
 
 export async function POST(req, {params}){
