@@ -19,3 +19,21 @@ export async function PUT(req, {params}){
         return NextResponse.json({message: "Internal Server Error"}, {status: 500});
     }
 }
+
+export async function DELETE(req, {params}){
+    try{
+        const {id} = params;
+
+        const deletedBook = await prisma.book.delete({
+            where:{
+                id: +id
+            }
+        })
+
+        return NextResponse.json(deletedBook);
+    } catch(e) {
+        console.log(e);
+        return NextResponse.json({message: "Internal Server Error"}, {status: 500});
+    }
+}
+
