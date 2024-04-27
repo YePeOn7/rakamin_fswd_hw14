@@ -1,5 +1,40 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Note
+
+* Initialize Prisma for the firs time
+
+```bash
+npm install prisma --save-dev
+npx prisma init
+```
+
+* on prisma schema change the url with the follwoing (postgres)
+
+```bash
+postgresql://USER:PASSWORD@HOST:PORT/DATABASE
+```
+
+* Update the prisma model
+
+* Migration
+
+```bash
+npm run migrate
+```
+
+* Prisma Generate
+
+```bash
+npx prisma generate
+```
+
+* Run prisma studio
+  
+```bash
+npx prisma studio
+```
+
 ## Getting Started
 
 First, run the development server:
