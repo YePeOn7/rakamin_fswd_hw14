@@ -36,3 +36,14 @@ export async function POST(req, {params}){
         return NextResponse.json({message: "Internal Server Error"}, {status: 500});
     }
 }
+
+export async function GET(req, {params}){
+    try {
+        const data = await prisma.book.findMany();
+
+        return NextResponse.json(data, {status: 200})
+    } catch(err) {
+        console.log(err);
+        return NextResponse.json({message: "Internal Server Error"}, {status: 500})
+    }
+}
