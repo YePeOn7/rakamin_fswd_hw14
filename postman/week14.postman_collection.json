@@ -36,7 +36,7 @@
 						}
 					}
 				},
-				"url": "{{url}}/login"
+				"url": "{{url}}/api/login"
 			},
 			"response": []
 		},
@@ -60,7 +60,7 @@
 						}
 					}
 				},
-				"url": "{{url}}/register"
+				"url": "{{url}}/api/register"
 			},
 			"response": []
 		},
@@ -110,7 +110,7 @@
 						}
 					]
 				},
-				"url": "{{url}}/books"
+				"url": "{{url}}/api/books"
 			},
 			"response": []
 		},
@@ -125,7 +125,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "{{url}}/books"
+				"url": "{{url}}/api/books"
 			},
 			"response": []
 		},
@@ -149,7 +149,7 @@
 						}
 					}
 				},
-				"url": "{{url}}/books/1"
+				"url": "{{url}}/api/books/1"
 			},
 			"response": []
 		},
@@ -164,7 +164,7 @@
 				},
 				"method": "DELETE",
 				"header": [],
-				"url": "{{url}}/books/1"
+				"url": "{{url}}/api/books/1"
 			},
 			"response": []
 		}
@@ -192,7 +192,7 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "localhost:8000",
+			"value": "localhost:3000",
 			"type": "string"
 		},
 		{
