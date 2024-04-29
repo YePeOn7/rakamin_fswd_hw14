@@ -1,7 +1,9 @@
 "use client"
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react"
 
 const Navbar = ({currentActive}) => {
+    const router = useRouter();
     const [isLogedIn, setIsLogedIn] = useState(false);
     useEffect(() => {
         console.log(">>>", currentActive);
