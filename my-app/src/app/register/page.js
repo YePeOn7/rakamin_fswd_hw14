@@ -4,7 +4,7 @@ import Navbar from "@/app/components/navbar";
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation";
 
-export default function Home() {
+export default function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
