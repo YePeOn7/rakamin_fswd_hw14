@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Navbar from "./components/navbar";
+import Navbar from "@/app/components/navbar";
 
 export default function Home() {
   return (
-    <Navbar currentActive="Home"/>
+    <Navbar currentActive="Login"/>
   );
 }
