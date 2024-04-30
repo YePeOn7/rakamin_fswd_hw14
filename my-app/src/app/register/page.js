@@ -3,31 +3,17 @@ import Image from "next/image";
 import Navbar from "@/app/components/navbar";
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation";
+import * as axiosModule from "@/lib/axios"
 
 export default function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
-    // const router = useRouter();
+    const router = useRouter();
 
     const handleSubmit = async () => {
-        // console.log(name, email, password);
-        // try {
-        //     await login({ email, password });
-        //     Swal.fire({
-        //         icon: "success",
-        //         title: "Login Successful!",
-        //         text: "Login Success!",
-        //     });
-        //     router.push("/")
-        // } catch (error) {
-        //     console.log("Something went wrong!", error)
-        //     Swal.fire({
-        //         icon: "error",
-        //         title: "Invalid Username or Password!",
-        //         text: "Please enter the correct username or password!",
-        //     });
-        // }
+        axiosModule.register(name, email, password);
+        router.push("/");
     }
 
     return (

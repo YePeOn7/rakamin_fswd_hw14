@@ -13,7 +13,7 @@ export async function POST(req, {params}){
         const image = fd.get("image");
 
         const imagePath = await uploadFile(image, "/images")
-        console.log(imagePath);
+        // console.log(imagePath);
 
         const addedBook = await prisma.book.create({
             data:{

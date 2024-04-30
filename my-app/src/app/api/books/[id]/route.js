@@ -1,6 +1,22 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 
+export async function GET(req, {params}){
+    const {id} = params;
+    try {
+        const data = await prisma.book.findUnique({
+            where:{
+                id: +id
+            }
+        });
+
+        return NextResponse.json(data, {status: 200})
+    } catch(err) {
+        console.log(err);
+        return NextResponse.json({message: "Internal Server Error"}, {status: 500})
+    }
+}
+
 export async function PUT(req, {params}){
     try{
         const {id} = params;
